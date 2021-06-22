@@ -1,0 +1,187 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "SF Pro";
+  src: url(/fonts/FontsFree-Net-SFProText-Regular.ttf);
+}
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 30px;
+  background-color: #f1f1f1;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  font-family: "SF Pro";
+}
+
+#editor .wrapper {
+  position: relative;
+  -webkit-transform: translateY(350px);
+          transform: translateY(350px);
+}
+
+#editor textarea {
+  display: block;
+  border: 1px solid #C5D0DB;
+  border-radius: 4px;
+  outline: none;
+  padding: 9px 30px 9px 9px;
+  width: 290px;
+  font-family: "SF Pro";
+  resize: none;
+  overflow: hidden;
+  min-height: 40px;
+  line-height: 17px;
+}
+
+#editor textarea::-webkit-input-placeholder {
+  font-family: "SF Pro";
+  font-size: 13px;
+}
+
+#editor textarea::-moz-placeholder {
+  font-family: "SF Pro";
+  font-size: 13px;
+}
+
+#editor textarea:-ms-input-placeholder {
+  font-family: "SF Pro";
+  font-size: 13px;
+}
+
+#editor textarea::-ms-input-placeholder {
+  font-family: "SF Pro";
+  font-size: 13px;
+}
+
+#editor textarea::placeholder {
+  font-family: "SF Pro";
+  font-size: 13px;
+}
+
+#editor .set_emoji {
+  position: fixed;
+  bottom: calc(100% + 15px);
+  right: 0px;
+  border-radius: 4px;
+  width: 290px;
+  max-height: 280px;
+  overflow: auto;
+  background-color: white;
+  border: 1px solid #C5D0DB;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+
+#editor .category {
+  padding: 0 9px 9px 9px;
+  color: #939393;
+  font-size: 13px;
+}
+
+#editor .category .content {
+  color: #777;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#editor .set_emoji .tabs {
+  position: sticky;
+  width: 100%;
+  bottom: 0;
+  background-color: #f1f1f1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#editor .set_emoji .tab {
+  width: 36px;
+  height: 36px;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: center;
+  cursor: pointer;
+}
+
+#editor .set_emoji .tab.all {
+  background-image: url(../img/emoji.svg);
+}
+
+#editor .set_emoji .tab.used {
+  background-image: url(../img/last.svg);
+}
+
+#editor .set_emoji .tab.current {
+  background-color: white;
+}
+
+/* Кастомизирем scrollbar */
+#editor .set_emoji::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+#editor .set_emoji::-webkit-scrollbar {
+  width: 6px;
+  background-color: transparent;
+  height: 150px;
+}
+
+#editor .set_emoji::-webkit-scrollbar-thumb {
+  background-color: #dae2ea;
+  border-radius: 3px;
+  height: 25%;
+}
+
+#editor .button_emoji {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  background-image: url(../img/emoji.svg);
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#editor .emoji {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 11%;
+          flex: 0 0 11%;
+  cursor: pointer;
+  font-family: "Segoe UI Emoji";
+  padding: 2px;
+  font-size: 16px;
+}
+#editor .emoji:hover {
+  background-color: #ebeef2;
+  border-radius: 4px;
+}
+
+#editor .title {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  padding: 9px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(85%, white), to(transparent));
+  background-image: linear-gradient(to bottom, white 0%, white 85%, transparent 100%);
+}
+
+.hashtag {
+  color: #2A5885;
+}
