@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @font-face {
   font-family: "SF Pro";
-  src: url(/fonts/FontsFree-Net-SFProText-Regular.ttf);
+  src: url(https://elliinee.github.io/emojipicker/fonts/FontsFree-Net-SFProText-Regular.ttf);
 }
 * {
   -webkit-box-sizing: border-box;
